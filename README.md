@@ -61,7 +61,7 @@ You are requested to create your profile using the above link to be a part of it
 
 
 
-8. What are the two types of `Streams` available in `Flutter`?
+9. What are the two types of `Streams` available in `Flutter`?
    
    There are two types of Streams available in Flutter which are:
       ..* Single subscription streams
@@ -71,30 +71,64 @@ You are requested to create your profile using the above link to be a part of it
    `Broadcast streams` : This stream is meant for the individual messages that can be handeled one at a time. Multiple `listener` can listen at a time and it also gives the user the chance to listen after the cancellation of the previous subscription.
 
 
-9. What is a `Flutter Inspector` ?
+10. What is a `Flutter Inspector` ?
    
    `Flutter Inspector` is a tool that helps in visualizing and exploring the widget trees. It also helps in understanding the present layout and rectify the layout issues.
 
 
-10. Is CI/CD possible in `Flutter`?
+11. Is CI/CD possible in `Flutter`?
 
    Yes, CI/CD is possible in `Flutter`. There is CI/CD tool dedicated to `Flutter` the name is `CODE MAGIC`. With the help of `CODE MAGIC` we can easily automate the process of CI/CD for flutter apps from single automation.
    
    
-11. What’s the difference between `hot reload` and `hot restart`?
+12. What’s the difference between `hot reload` and `hot restart`?
      Hot reload maintains the app state while updating the UI almost instantaneously whereas Hot restart resets the app state to its initial conditions before updating the UI.
 
 
-12. What are Null-aware operators in `Flutter` ?    
+13. What are Null-aware operators in `Flutter` ?    
 
      Dart offers some handy operators for dealing with values that might be null.
 
      a.One is the ??= assignment operator, which assigns a value to a variable only if that variable is currently null<br>
      b.Another null-aware operator is ??, which returns the expression on its left unless that expression’s value is null, in which case it evaluates and returns the expression        on its right
 
-13. What is use of `Navigation.push` and `Navigation.pop` function? 
+14. What is use of `Navigation.push` and `Navigation.pop` function? 
    
     The `push` method is used to add a route to the stack of routes managed by the navigator. The `pop` method is used to remove the current route from the stack of routes managed by the navigator.
+    
+15. What is ScopedModel / BLoC Pattern?   
+
+	ScopedModel and BLoC (Business Logic Components) are common Flutter app architecture patterns to help separate business logic from UI code and using fewer Stateful Widgets.
+
+Scoped Model is a third-party package that is not included into Flutter framework. It's a set of utilities that allow you to easily pass a data Model from a parent Widget down to its descendants. In addition, it also rebuilds all of the children that use the model when the model is updated. This library was originally extracted from the Fuchsia codebase.
+
+BLoC stands for Business Logic Components. It helps in managing state and make access to data from a central place in your project. The gist of BLoC is that everything in the app should be represented as stream of events: widgets submit events; other widgets will respond. BLoC sits in the middle, managing the conversation.
+
+16. Given the following widget:
+	""
+		class MyWidget extends StatelessWidget {
+		  final personNextToMe = 'That reminds me about the time when I was ten and our neighbor, her name was Mrs. Mable, and she said...';
+
+		  @override
+		  Widget build(BuildContext context) {
+		    return Row(children: [
+		      Icon(Icons.airline_seat_legroom_reduced),
+		      Text(personNextToMe),
+		      Icon(Icons.airline_seat_legroom_reduced),
+		    ]);
+		  }
+		}
+
+	""
+	There is a text overflow on some narrow devices: How would you fix this?
+	Solution-
+			Expanded(
+  				child: Text(
+    					personNextToMe,
+  				),
+			),
+
+	
 
 
 
