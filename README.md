@@ -106,9 +106,10 @@ BLoC stands for Business Logic Components. It helps in managing state and make a
 
 16. Given the following widget:
 	""
+		
 		class MyWidget extends StatelessWidget {
 		  final personNextToMe = 'That reminds me about the time when I was ten and our neighbor, her name was Mrs. Mable, and she said...';
-
+		  
 		  @override
 		  Widget build(BuildContext context) {
 		    return Row(children: [
@@ -122,6 +123,7 @@ BLoC stands for Business Logic Components. It helps in managing state and make a
 	""
 	There is a text overflow on some narrow devices: How would you fix this?
 	Solution-
+			
 			Expanded(
   				child: Text(
     					personNextToMe,
